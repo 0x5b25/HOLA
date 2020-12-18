@@ -1,0 +1,10 @@
+# Ignore everything:
+*
+
+# Except for the include dir:
+
+!/include/
+!/include/*
+!/sample.cpp
+!/readme.md
+!/.gitignore
