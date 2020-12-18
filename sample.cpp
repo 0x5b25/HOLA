@@ -1,6 +1,7 @@
 #include "stdio.h"
 
 #include "include/ndarray.hpp"
+#include "include/HOLA.hpp"
 
 int main()
 {
@@ -14,6 +15,8 @@ int main()
         HOLA::ndarray<float>({ 4, 5,6 })
     }
     );
+
+    HOLA::Matrix<float> M({ {1,2} });
 
     auto B = A_ * arr;
 

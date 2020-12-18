@@ -599,9 +599,7 @@ namespace HOLA
         _buffer(std::initializer_list<int> dims) :_buffer(dims.begin(), dims.end()){}
         _buffer(const std::vector<int>& dims)
             :_buffer(dims.begin(), dims.end())
-        {
-            
-        }
+        { }
 
         std::size_t ndim() const
         {
@@ -776,6 +774,16 @@ namespace HOLA
             return result;
         }
 
+        static ndarray<T> cat(const std::vector<ndarray<T>>& arrs, int dim = 0)
+        {
+            
+        }
+
+        void permute(const std::vector<int>& axes)
+        {
+            assert(ndim() == axes.size());
+        }
+
         ndarray<T> operator[](const std::vector<mapping_info>& slices)
         {
             auto actualmap = _dims.Remap(slices);
@@ -813,6 +821,11 @@ namespace HOLA
             _dims = std::move(arr._dims);
 
             return *this;
+        }
+
+        static ndarray<T>& MatMul(const ndarray<T>& A, const ndarray<T>& B)
+        {
+            
         }
 
         
